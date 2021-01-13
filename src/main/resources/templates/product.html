@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+    <html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="fragments :: head"></head>
+    <body>
+    <div th:replace="fragments :: navbar" ></div>
+ 
+    <div class="container">
+        <div class="card mb-3 large-product-card">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <img alt="mockproduct_1" src="/image/1/iphonexfrontback-800x573.jpg" class="card-img" style="max-height: 100%; object-fit: cover;" />
+                </div>
+            <div class="col-md-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4 style="margin-bottom: 0;">mockproduct_1</h4>
+                        <small>applebrandname</small>
+                    </div>
+                    <h5 class="card-text">price_1</h5>
+                    <p class="card-text">description_1</p>
+                    <form th:action="@{/cart}" method="post">
+                        <input type="hidden" />
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer th:replace="fragments :: footer"></footer>
+    </body>
+    </html>
+
